@@ -1,8 +1,9 @@
 # BibliONteca
 Projeto Desenvolvido como trabalho semestral da disciplina 
 **Desenvolvimento Web II** do curso de Análise e Desenvolvimento de sistemas.
-## Sobre o Projeto
-A bibli**ON**teca é um sistema de gerenciamento bibliotecário. O objetivo do projeto foi
+
+## Como rodar
+
 ## Funcionalidades
  ### Autenticação
  - Cadastro e login de usuários comuns através do usuario `bibliotecario`
@@ -18,8 +19,7 @@ A bibli**ON**teca é um sistema de gerenciamento bibliotecário. O objetivo do p
 - Faz o CRUD de gênero literário, categoria, livros e empréstimos
 ## Tecnologias Utilizadas
 - Laravel com blade
-- phpMyAdmin (Via Xampp)
-- Apache (Via Xampp)
+- Apache
 - Tailwind CSS 
 - Dompdf (geração de pdf)
 - Breeze (Autenticação)
