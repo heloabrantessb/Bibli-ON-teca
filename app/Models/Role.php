@@ -15,9 +15,4 @@ class Role extends Model
         'funcao'
     ];
 
-    public function user()
-    {
-        return $this->belongsTo(User::class);
-    }
-
 }

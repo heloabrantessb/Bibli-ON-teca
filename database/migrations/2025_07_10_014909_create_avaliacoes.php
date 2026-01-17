@@ -17,6 +17,7 @@ return new class extends Migration
             $table->foreignId('livro_id')->constrained()->onDelete('cascade');
             $table->foreignId('emprestimo_id')->constrained()->onDelete('cascade');
             $table->integer('nota');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
