@@ -38,7 +38,6 @@ Route::middleware(['auth', 'verified', 'funcao:usuario'])->group(function () {
         ->name('avaliacoes.form');
 });
 
-
 //Rotas para dashboard
 Route::middleware(['auth', 'verified'])
     ->get('/dashboard', [DashboardController::class, 'index'])
@@ -49,9 +48,12 @@ Route::middleware(['auth', 'verified'])->group(function () {
         ->name('admin.dashboard');
     Route::middleware('funcao:bibliotecario')->get('/bibliotecario/dashboard', [UserController::class, 'bibliotecarioDashboard'])
         ->name('bibliotecario.dashboard');
-    Route::middleware('funcao:usuario')->get('/usuario/dashboard', [UserController::class, 'usuarioDashboard'])
+    Route::middleware('funcao:professor')->get('/professor/dashboard', [UserController::class, 'professorDashboard'])
+        ->name('professor.dashboard');
+    Route::middleware('funcao:aluno')->get('/usuario/dashboard', [UserController::class, 'usuarioDashboard'])
         ->name('usuario.dashboard');
-
+    Route::middleware('funcao:funcionario')->get('/funcionario/dashboard', [UserController::class, 'funcionarioDashboard'])
+        ->name('funcionario.dashboard');
 });
 
 //rotas do breeze

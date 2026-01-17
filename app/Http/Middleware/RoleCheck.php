@@ -18,7 +18,11 @@ class RoleCheck
     {   
         $usuario = Auth::user();
 
-        if (!$usuario || !$usuario->role || !in_array($usuario->role->funcao, $funcoes)) {
+        $temPermissao = $usuario->roles()
+        ->whereIn('funcao', $funcoes)
+        ->exists();
+
+        if (!$usuario || !$temPermissao) {
             abort(403, 'Acesso não autorizado.');
         }
 

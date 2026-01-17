@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
             GeneroSeeder::class,
             RoleSeeder::class,  
             UserSeeder::class,
+            RoleUserSeeder::class,
             LivroSeeder::class,
         ]);
     }

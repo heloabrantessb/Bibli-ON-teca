@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\RoleUser;
 use Illuminate\Database\Seeder;
 
 class RoleUserSeeder extends Seeder

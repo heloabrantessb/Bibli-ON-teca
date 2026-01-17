@@ -35,8 +35,12 @@ class AuthenticatedSessionController extends Controller
                 return redirect()->route('admin.dashboard');
             case 'bibliotecario':
                 return redirect()->route('bibliotecario.dashboard');
-            case 'usuario':
+            case 'professor':
+                return redirect()->route('professor.dashboard');
+            case 'aluno':
                 return redirect()->route('usuario.dashboard');
+            case 'funcionario':
+                return redirect()->route('funcionario.dashboard');
             default:
                 Auth::logout();
                 return redirect()->route('login');
